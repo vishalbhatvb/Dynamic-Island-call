@@ -1,6 +1,112 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
+  <title>Eggs and Roosters Online Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0px;
+      padding: 0px;
+      background-image: url("background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      color: rgb(9, 255, 0);
+      
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      
+    }
+
+    .product img {
+      max-width: 200px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .product h2 {
+      margin-top: 10px;
+      font-size: 20px;
+      color: rgb(9, 255, 0);
+    }
+
+    .product p {
+      margin-top: 5px;
+      font-weight: bold;
+      color: rgb(9, 255, 0);
+    }
+
+    .call-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .call-button a {
+      display: inline-block;
+      background-color: #f4511e;
+      color: #c11616;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .call-button a:hover {
+      background-color: #66c000;
+    }
+      </style>
+</head>
+<body>
+  <h1>Eggs and Roosters Online Store</h1>
+
+  <div class="product">
+    <img src="egg.jpg" alt="Egg" />
+    <h2>अंडी</h2>
+    <p>किंमत: ₹ 85/डझन</p>
+  </div>
+  <div class="call-button">
+    <a href="tel:+919767042875">Call to Place an Order</a>
+  </div>
+
+  <div class="product">
+    <img src="rooster.jpg" alt="Rooster" />
+    <h2>कोंबडा</h2>
+    <p>किंमत: ₹ 600/नग</p>
+  </div>
+
+  <div class="call-button">
+    <a href="tel:+919767042875">Call to Place an Order 9767042875</a>
+    <audio  autoplay>
+      <source id="background-music" src="background-music.mp3">
+      </audio>
+  <script>
+    document.getElementById('background-music').play();
+  </script>
+    </div>
+    <body onload="play()">
+      <audio loop= 'true'>
+      <source src="background-music.mp3" type="audio/mp3">
+      </audio>
+      <script>
+      let x = document.querySelector('audio');
+      function play(){
+      x.play();
+      }
+      </script>
+      </body>
+      
+</body>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
