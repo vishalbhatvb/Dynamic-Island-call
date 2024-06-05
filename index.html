@@ -89,25 +89,41 @@
   </div>
 
   <div class="call-button">
-    <a href="tel:+919767042875">Call to Place an Order 9767042875</a>
-    <audio  autoplay>
-      <source id="background-music" src="background-music.mp3">
-      </audio>
-  <script>
-    document.getElementById('background-music').play();
-  </script>
+    <a href="tel:+919767042875">Call to Place an Order 9767042875</a>    <!-- Your content here -->
+    <div style="height: 1500px;">
+        <h1>Scroll down to play audio</h1>
+        <!-- More content -->
     </div>
-    <body onload="play()">
-   <audio id="myaudio" autoplay="autoplay" loop="loop" controls="controls">
-            <source src="background-music.mp3" type="audio/mp3" />
-        </audio>
-            </div>
 
+    <!-- Audio element -->
+    <audio id="background-music" loop="loop" controls="controls">
+        <source src="background-music.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- JavaScript to handle scroll event -->
     <script>
-        var audio = document.getElementById("myaudio");
-        audio.volume = 0.2;
+        document.addEventListener('scroll', function() {
+            var audio = document.getElementById('background-music');
+            if (!audio.playing) {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                var triggerHeight = 100; // Adjust this value to set the scroll height to trigger the audio
 
-            </script>
+                if (scrollTop > triggerHeight) {
+                    audio.play().catch(function(error) {
+                        console.log('Audio playback failed:', error);
+                    });
+                }
+            }
+        });
+
+        // Adding a property to track if the audio is playing
+        Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+            get: function(){
+                return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+            }
+        });
+    </script>
+
 
       let x = document.querySelector('audio');
       function play(){
