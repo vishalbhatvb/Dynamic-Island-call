@@ -90,7 +90,7 @@
 
   <div class="call-button">
     <a href="tel:+919767042875">Call to Place an Order 9767042875</a>    <!-- Your content here -->
-    <div style="height: 1500px;">
+    <div style="height: 150px;">
         <h1>Scroll down to play audio</h1>
         <!-- More content -->
     </div>
@@ -106,7 +106,7 @@
             var audio = document.getElementById('background-music');
             if (!audio.playing) {
                 var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                var triggerHeight = 100; // Adjust this value to set the scroll height to trigger the audio
+                var triggerHeight = 10; // Adjust this value to set the scroll height to trigger the audio
 
                 if (scrollTop > triggerHeight) {
                     audio.play().catch(function(error) {
