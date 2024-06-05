@@ -98,10 +98,17 @@
   </script>
     </div>
     <body onload="play()">
-      <audio loop= 'true'>
-      <source src="background-music.mp3" type="audio/mp3">
-      </audio>
-      <script>
+   <audio id="myaudio" autoplay="autoplay" loop="loop" controls="controls">
+            <source src="background-music.mp3" type="audio/mp3" />
+        </audio>
+            </div>
+
+    <script>
+        var audio = document.getElementById("myaudio");
+        audio.volume = 0.2;
+
+            </script>
+
       let x = document.querySelector('audio');
       function play(){
       x.play();
